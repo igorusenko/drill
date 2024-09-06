@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+html, body {
+  height: 100%;
+  margin: 0;
+}
+
+.main-layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.container-fluid {
+  padding-left: unset !important;
+  padding-right: unset !important;
+}
+
+.header-container {
+  background-color: #f8f9fa; // Цвет фона для хедера
+  padding: 1rem;
+}
+
+.main-container {
+  flex: 1; // Растягивает основной контейнер на оставшееся пространство
+  background-color: #fff; // Цвет фона для main
+  padding: 1rem;
+}
+
+.footer-container {
+  background-color: #f1f1f1; // Цвет фона для футера
+  padding: 1rem;
+}
