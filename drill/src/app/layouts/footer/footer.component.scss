@@ -1,0 +1,12 @@
+.footer-block {
+
+  .footer-items {
+    display: flex;
+    gap: 2rem;
+
+    .column {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+}

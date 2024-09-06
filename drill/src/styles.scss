@@ -3,6 +3,10 @@ html, body {
   margin: 0;
 }
 
+app-root, .main-layout {
+  height: 100%;
+}
+
 .main-layout {
   display: flex;
   flex-direction: column;
@@ -17,15 +21,28 @@ html, body {
 .header-container {
   background-color: #f8f9fa; // Цвет фона для хедера
   padding: 1rem;
+  border-bottom-left-radius: 0.5rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom: 1px solid #dcdcdc;
 }
 
-.main-container {
+.main-container, app-home {
+  display: flex;
   flex: 1; // Растягивает основной контейнер на оставшееся пространство
-  background-color: #fff; // Цвет фона для main
-  padding: 1rem;
 }
 
 .footer-container {
   background-color: #f1f1f1; // Цвет фона для футера
   padding: 1rem;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-top: 1px solid #dcdcdc;
+}
+
+p {
+  margin-bottom: unset !important;
+}
+
+app-home {
+  height: 100%;
 }
