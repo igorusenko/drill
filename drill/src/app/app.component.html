@@ -1,11 +1,11 @@
 <div class="main-layout container-fluid">
-  <div class="header-container">
+  <div *ngIf="animation" [@slideInDownAnimation] class="header-container">
     <header-block></header-block>
   </div>
   <div class="main-container">
     <router-outlet />
   </div>
-  <div class="footer-container">
+  <div *ngIf="animation" [@slideInUpAnimation] class="footer-container">
     <footer-block></footer-block>
   </div>
 </div>

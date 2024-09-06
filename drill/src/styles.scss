@@ -5,6 +5,7 @@ html, body {
 
 app-root, .main-layout {
   height: 100%;
+  background-color: black;
 }
 
 .main-layout {
@@ -19,11 +20,10 @@ app-root, .main-layout {
 }
 
 .header-container {
-  background-color: #f8f9fa; // Цвет фона для хедера
   padding: 1rem;
   border-bottom-left-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
-  border-bottom: 1px solid #dcdcdc;
+  border-bottom: 1px solid #292929;
 }
 
 .main-container, app-home {
@@ -32,15 +32,15 @@ app-root, .main-layout {
 }
 
 .footer-container {
-  background-color: #f1f1f1; // Цвет фона для футера
   padding: 1rem;
   border-top-left-radius: 0.5rem;
   border-top-right-radius: 0.5rem;
-  border-top: 1px solid #dcdcdc;
+  border-top: 1px solid #292929;
 }
 
 p {
   margin-bottom: unset !important;
+  color: white;
 }
 
 app-home {
