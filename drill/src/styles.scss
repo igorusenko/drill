@@ -6,6 +6,9 @@ html, body {
 app-root, .main-layout {
   height: 100%;
   background-image: url("assets/gif/fon.gif");
+  background-size: cover; /* Покрывает весь div */
+  background-repeat: no-repeat; /* Убирает повторение */
+  background-position: center; /* Центрирует изображение */
 }
 
 .main-layout {
