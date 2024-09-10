@@ -1,7 +1,13 @@
-.home-container {
-  flex: 1;
-  background-image: url('/assets/gif/0001-0160-ezgif.com-video-to-gif-converter.gif');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+.logo-container {
+  width: 100%;
+  background-image: url("/assets/gif/logo.gif");
+  background-size: cover; /* Покрывает весь div */
+  background-repeat: no-repeat; /* Убирает повторение */
+  background-position: center; /* Центрирует изображение */
+}
+
+@media screen and (max-width: 1000px ){
+.logo-container {
+  background-size: contain;
+}
 }
