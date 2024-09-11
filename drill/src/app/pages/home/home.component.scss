@@ -1,3 +1,14 @@
+.chupik {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  img {
+    width: 200px;
+    height: 200px;
+  }
+}
+
 .video-container {
   height: 100%;
   width: 100%;
@@ -8,7 +19,7 @@
   width: 100%;
   height: 100%;
   position: absolute;
-  object-fit: cover;
+  object-fit: contain;
   z-index: 0;
 }
 

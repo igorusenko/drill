@@ -1,5 +1,9 @@
-<div class="video-container">
+<div *ngIf="isViewLogo" class="video-container">
   <video autoplay muted loop>
     <source src="./assets/video/logo.mp4" type="video/mp4" />
   </video>
+</div>
+
+<div *ngIf="!isViewLogo" class="chupik">
+  <img src="./assets/gif/detki_loading_web.gif" alt="">
 </div>

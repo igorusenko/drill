@@ -1,11 +1,7 @@
-.footer-block {
 
-  .footer-items {
-    display: flex;
-    gap: 2rem;
-
-    .column {
-      display: flex;
+@media (max-width: 768px) {
+  .footer-block {
+    .footer-items {
       flex-direction: column;
     }
   }

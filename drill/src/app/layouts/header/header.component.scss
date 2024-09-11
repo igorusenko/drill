@@ -3,3 +3,11 @@
   align-items: center;
   justify-content: space-between;
 }
+
+@media (max-width: 768px) {
+  .header-block {
+    img:last-child {
+      display: none;
+    }
+  }
+}

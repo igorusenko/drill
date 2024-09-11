@@ -6,15 +6,16 @@ html, body {
 app-root, .main-layout {
   height: 100%;
   background-image: url("assets/gif/fon.gif");
-  background-size: cover; /* Покрывает весь div */
-  background-repeat: no-repeat; /* Убирает повторение */
-  background-position: center; /* Центрирует изображение */
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .main-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  cursor: url("/assets/img/chupi.png"), auto;
 }
 
 .container-fluid, container {
@@ -22,17 +23,9 @@ app-root, .main-layout {
   padding-right: unset !important;
 }
 
-.header-container {
-  padding: 1rem;
-}
-
 .main-container, app-home {
   display: flex;
   flex: 1; // Растягивает основной контейнер на оставшееся пространство
-}
-
-.footer-container {
-  padding: 1rem;
 }
 
 p {

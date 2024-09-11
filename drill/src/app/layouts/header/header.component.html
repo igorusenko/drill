@@ -1,11 +1,3 @@
 <div class="header-block">
-  <div class="left-block">
-    <p>Детки продакшн</p>
-  </div>
-  <div class="central-block">
-    <p>2024</p>
-  </div>
-  <div class="reght-block">
-    <p>Телеграм</p>
-  </div>
+  <img *ngFor="let image of headerImages" [src]="'./assets/svg/' + image" alt="">
 </div>

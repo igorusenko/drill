@@ -1,13 +1,6 @@
 <div class="footer-block">
-  <div class="footer-items">
-    <div class="column">
-      <p>В ролях:</p>
-    </div>
-    <div class="column">
-      <p>Мамут Рахал</p>
-    </div>
-    <div class="column">
-        <p>Жечка Дырова</p>
-    </div>
+  <div class="footer-items d-flex justify-content-between">
+    <img [src]="'./assets/svg/footer_1.svg'" alt="">
+    <img *ngFor="let image of footerImages" [src]="'./assets/svg/' + image" alt="">
   </div>
 </div>
