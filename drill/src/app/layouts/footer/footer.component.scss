@@ -1,7 +1,16 @@
+.footer-blocks {
+  display: flex;
+  padding: 0 4rem 2rem 4rem;
+
+  .footer-items {
+    display: flex;
+    gap: 83px;
+  }
+}
 
 @media (max-width: 768px) {
   .footer-block {
-    .footer-items {
+    .footer-blocks {
       flex-direction: column;
     }
   }
