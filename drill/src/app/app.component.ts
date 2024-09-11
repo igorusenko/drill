@@ -15,11 +15,13 @@ import {slideInUpAnimation} from "./animations/side-up";
   animations: [slideInDownAnimation, slideInUpAnimation],
 })
 export class AppComponent implements OnInit{
-  title = 'drill';
+  title = 'Detki_Production';
 
-  animation: boolean = false;
+  isView: boolean = false;
 
   ngOnInit() {
-    this.animation = true;
+    setTimeout(() => {
+      this.isView = true;
+    },1000)
   }
 }
