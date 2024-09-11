@@ -36,6 +36,10 @@
 
 @media (max-width: 768px) {
   .video-container {
+    video {
+      height: unset;
+      top: 34%;
+    }
     .content {
       display: block;
     }
