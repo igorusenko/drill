@@ -16,7 +16,7 @@ export class HomeComponent implements OnInit{
   ngOnInit() {
     setTimeout(() => {
       this.isViewLogo = true;
-    }, 1000)
+    }, 2000)
   }
 
 }
