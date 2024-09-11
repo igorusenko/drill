@@ -1,9 +1,12 @@
-<div *ngIf="isViewLogo" class="video-container">
+<div *ngIf="isViewLogo" @fadeInOut class="video-container">
   <video autoplay muted loop>
-    <source src="./assets/video/logo.mp4" type="video/mp4" />
+    <source src="assets/video/logo.mp4" type="video/mp4" />
   </video>
+  <div class="content">
+    <p>СВЯЗЬ С НАМИ</p>
+  </div>
 </div>
 
-<div *ngIf="!isViewLogo" class="chupik">
+<div *ngIf="!isViewLogo" @fadeInOut class="chupik">
   <img src="./assets/gif/detki_loading_web.gif" alt="">
 </div>

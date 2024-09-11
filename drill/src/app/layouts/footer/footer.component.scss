@@ -12,6 +12,13 @@
   .footer-block {
     .footer-blocks {
       flex-direction: column;
+      gap: 27px;
+
+      .footer-items {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+      }
     }
   }
 }

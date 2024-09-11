@@ -8,6 +8,7 @@
 html, body {
   height: 100%;
   margin: 0;
+  overflow-x: hidden;
 }
 
 app-root, .main-layout {
@@ -46,9 +47,71 @@ p {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000,
-    0 0 25px #FFF85B,
+    0 0 25px #FFF85B;
+
+  transition: transform 0.1s ease-in-out;
+
+  &:hover {
+    animation: shake 0.3s infinite, color-change 1.5s linear infinite;
+  }
+
+  @keyframes shake {
+    0%, 100% {
+      transform: translateX(0);
+    }
+    25% {
+      transform: translateX(-2px);
+    }
+    50% {
+      transform: translateX(2px);
+    }
+    75% {
+      transform: translateX(-1px);
+    }
+  }
+
+  @keyframes color-change {
+    0% {
+      color: #FFF85B;
+    }
+    12.5% {
+      color: #ff9900;
+    }
+    25% {
+      color: #ffdd00;
+    }
+    37.5% {
+      color: #aaff00;
+    }
+    50% {
+      color: #11ff00;
+    }
+    62.5% {
+      color: #00ffbb;
+    }
+    75% {
+      color: #00c4ff;
+    }
+    87.5% {
+      color: #0066ff;
+    }
+    100% {
+      color: #FFF85B;
+    }
+  }
 }
 
 app-home {
   height: 100%;
+}
+
+.header-container, .footer-container {
+  z-index: 10;
+}
+
+@media (max-width: 768px) {
+  p {
+    font-size: 38px;
+    line-height: 41.8px;
+  }
 }
