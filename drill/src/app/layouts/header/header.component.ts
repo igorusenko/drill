@@ -16,4 +16,8 @@ export class HeaderComponent {
     'header_2.svg',
     'header_3.svg',
   ]
+
+  redirectToTelegram(): void {
+    window.location.href = 'https://t.me/detkiprod';
+  }
 }

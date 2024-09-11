@@ -19,4 +19,8 @@ export class HomeComponent implements OnInit{
     }, 2000)
   }
 
+  redirectToTelegram(): void {
+    window.location.href = 'https://t.me/detkiprod';
+  }
+
 }
