@@ -13,6 +13,7 @@
   height: 100%;
   width: 100%;
   position: relative;
+  overflow: hidden;
 
   video {
     width: 100%;
@@ -20,6 +21,8 @@
     position: absolute;
     object-fit: contain;
     z-index: 0;
+    -webkit-media-controls: none;
+    -webkit-media-controls-panel: none;
   }
 
   .content {
@@ -33,9 +36,6 @@
 
 @media (max-width: 768px) {
   .video-container {
-    video {
-      object-fit: contain;
-    }
     .content {
       display: block;
     }
