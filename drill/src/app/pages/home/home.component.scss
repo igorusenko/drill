@@ -22,12 +22,7 @@
 }
 
 @media (max-width: 768px) {
-  .video-container {
-    //height: auto; /* Высота будет зависеть от контента */
-  }
-
   .video-container video {
-    //width: 100%;
-    //height: auto;
+    object-fit: contain;
   }
 }
