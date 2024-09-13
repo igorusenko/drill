@@ -9,6 +9,7 @@ html, body {
   height: 100%;
   margin: 0;
   overflow-x: hidden;
+  cursor: url("/assets/img/chupi.png"), auto;
 }
 
 app-root, .main-layout {
@@ -23,7 +24,6 @@ app-root, .main-layout {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  cursor: url("/assets/img/chupi.png"), auto;
 }
 
 .container-fluid, container {

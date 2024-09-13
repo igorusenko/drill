@@ -36,12 +36,20 @@
 
 @media (max-width: 768px) {
   .video-container {
+    display: flex;
+    gap: 4rem;
+    justify-content: center;
+    flex-direction: column-reverse;
+
     video {
       height: unset;
-      top: 34%;
+      position: unset;
     }
     .content {
-      display: block;
+      display: flex;
+      position: unset;
+      align-items: center;
+      gap: 0.5rem;
     }
   }
 }
