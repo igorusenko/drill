@@ -1,4 +1,4 @@
-<div class="main-layout">
+<div class="main-layout" [style.cursor]="isView ? 'url(/assets/img/chupi.png), auto' : 'none'">
   <div *ngIf="isView" [@slideInDownAnimation] class="header-container">
     <header-block></header-block>
   </div>
