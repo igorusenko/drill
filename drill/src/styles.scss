@@ -50,8 +50,8 @@ p {
 
   transition: transform 0.1s ease-in-out;
 
-  &:hover {
-    animation: shake 0.3s infinite, color-change 1.5s linear infinite;
+  &.contact-us {
+      animation: shake 0.3s infinite, color-change 1.5s linear infinite;
   }
 
   @keyframes shake {

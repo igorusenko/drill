@@ -5,6 +5,7 @@ import {HeaderComponent} from "./layouts/header/header.component";
 import {slideInDownAnimation} from "./animations/side-down";
 import {NgIf} from "@angular/common";
 import {slideInUpAnimation} from "./animations/side-up";
+import {Title} from "@angular/platform-browser";
 
 @Component({
   selector: 'app-root',
@@ -15,9 +16,13 @@ import {slideInUpAnimation} from "./animations/side-up";
   animations: [slideInDownAnimation, slideInUpAnimation],
 })
 export class AppComponent implements OnInit{
-  title = 'Detki_Production';
+  title = 'Detki Production';
 
   isView: boolean = false;
+
+  constructor(private titleService: Title) {
+    titleService.setTitle(this.title)
+  }
 
   ngOnInit() {
     setTimeout(() => {
