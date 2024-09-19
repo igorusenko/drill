@@ -13,10 +13,13 @@
     .footer-blocks {
       flex-direction: column;
       gap: 27px;
+      padding: 0 1.5rem 10rem 1.5rem;
+      align-items: center;
 
       .footer-items {
-        flex-direction: column;
+        flex-wrap: wrap;
         align-items: center;
+        justify-content: space-between;
         gap: 0;
       }
     }
