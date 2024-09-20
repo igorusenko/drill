@@ -12,8 +12,7 @@
   .footer-block {
     .footer-blocks {
       flex-direction: column;
-      gap: 27px;
-      padding: 0 1.5rem 10rem 1.5rem;
+      padding: 0 1.5rem 1.5rem 1.5rem;
       align-items: center;
 
       .footer-items {
@@ -21,6 +20,10 @@
         align-items: center;
         justify-content: space-between;
         gap: 0;
+
+        .what-we-do {
+          display: none;
+        }
       }
     }
   }
