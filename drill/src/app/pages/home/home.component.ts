@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit, AfterViewChecked {
   videoSrc: string;
 
   constructor(private videoLoaderService: LoaderService) {
-    this.videoSrc = `assets/video/logo.mp4?v=${new Date().getTime()}`;
+    this.videoSrc = `assets/video/logo.mp4`;
   }
 
   ngOnInit() {
