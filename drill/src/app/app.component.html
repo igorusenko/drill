@@ -1,12 +1,17 @@
-<div class="main-layout" [style.cursor]="isView ? 'url(/assets/img/chupi.png), auto' : 'none'">
-  <div *ngIf="isView" [@slideInDownAnimation] class="header-container">
-    <header-block></header-block>
-  </div>
-  <div class="main-container">
-    <router-outlet />
-  </div>
-  <div *ngIf="isView" [@slideInUpAnimation] class="footer-container">
-    <footer-block></footer-block>
-  </div>
+<div class="main-layout" [style.cursor]="isVideoLoaded ? 'url(/assets/img/chupi.png), auto' : 'none'" [ngStyle]="{ 'display': isVideoLoaded ? 'flex' : 'none' }">
+    <div [@slideInDownAnimation] class="header-container">
+      <header-block></header-block>
+    </div>
+    <div class="main-container">
+      <router-outlet />
+    </div>
+    <div [@slideInUpAnimation] class="footer-container">
+      <footer-block></footer-block>
+    </div>
 </div>
 
+<div class="main-layout">
+<div [ngStyle]="{ 'display': isVideoLoaded ? 'none' : 'flex' }" class="chupik">
+  <img src="./assets/gif/detki_loading_web.gif" alt="">
+</div>
+</div>

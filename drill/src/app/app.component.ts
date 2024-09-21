@@ -3,14 +3,15 @@ import { RouterOutlet } from '@angular/router';
 import {FooterComponent} from "./layouts/footer/footer.component";
 import {HeaderComponent} from "./layouts/header/header.component";
 import {slideInDownAnimation} from "./animations/side-down";
-import {NgIf} from "@angular/common";
+import {NgClass, NgIf, NgStyle, NgTemplateOutlet} from "@angular/common";
 import {slideInUpAnimation} from "./animations/side-up";
 import {Title} from "@angular/platform-browser";
+import {LoaderService} from "./services/loader.service";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FooterComponent, HeaderComponent, NgIf,  ],
+  imports: [RouterOutlet, FooterComponent, HeaderComponent, NgIf, NgClass, NgStyle, NgTemplateOutlet,],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss',
   animations: [slideInDownAnimation, slideInUpAnimation],
@@ -18,15 +19,15 @@ import {Title} from "@angular/platform-browser";
 export class AppComponent implements OnInit{
   title = 'Detki Production';
 
-  isView: boolean = false;
+  isVideoLoaded: boolean;
 
-  constructor(private titleService: Title) {
+  constructor(private titleService: Title, private videoLoaderService: LoaderService) {
     titleService.setTitle(this.title)
   }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.isView = true;
-    }, 2000)
+    this.videoLoaderService.videoLoaded$.subscribe(isLoaded => {
+      this.isVideoLoaded = isLoaded;
+    })
   }
 }

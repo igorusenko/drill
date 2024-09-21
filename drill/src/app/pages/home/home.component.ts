@@ -1,22 +1,29 @@
 import {AfterContentChecked, AfterContentInit, AfterViewChecked, AfterViewInit, Component, OnInit} from '@angular/core';
-import {NgIf} from "@angular/common";
+import {NgClass, NgIf} from "@angular/common";
+import {LoaderService} from "../../services/loader.service";
 
 @Component({
   selector: 'app-home',
   standalone: true,
   imports: [
-    NgIf
+    NgIf,
+    NgClass
   ],
   templateUrl: './home.component.html',
   styleUrl: './home.component.scss'
 })
 export class HomeComponent implements OnInit, AfterViewChecked {
-  isViewLogo: boolean = false;
+  isVideoLoaded: boolean;
+  videoSrc: string;
+
+  constructor(private videoLoaderService: LoaderService) {
+    this.videoSrc = `assets/video/logo.mp4?v=${new Date().getTime()}`;
+  }
 
   ngOnInit() {
-    setTimeout(() => {
-      this.isViewLogo = true;
-    }, 2000)
+    this.videoLoaderService.videoLoaded$.subscribe(isLoaded => {
+      this.isVideoLoaded = isLoaded;
+    })
   }
 
   redirectToTelegram(): void {
@@ -31,5 +38,8 @@ export class HomeComponent implements OnInit, AfterViewChecked {
     }
   }
 
+  onVideoLoaded() {
+    this.videoLoaderService.notifyVideoLoaded();
+  }
 
 }
